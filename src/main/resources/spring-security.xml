@@ -47,6 +47,15 @@
                          logout-success-url="/login.jsp"/>
         <!--去掉csrf拦截的过滤器-->
         <!--<security:csrf disabled="true"/>-->
+
+        <!--开启remember me过滤器，设置token存储时间为60秒-->
+        <security:remember-me
+                data-source-ref="dataSource"
+                token-validity-seconds="60"
+                remember-me-parameter="remember-me"/>
+
+        <!--处理403异常-->
+        <!--<security:access-denied-handler error-page="/403.jsp"/>-->
     </security:http>
 
     <!--把加密对象放入的IOC容器中-->

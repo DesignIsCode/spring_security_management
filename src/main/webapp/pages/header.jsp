@@ -22,7 +22,7 @@
 						src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
 						class="user-image" alt="User Image">
 					<span class="hidden-xs">
-							<%--<security:authentication property="principal.username" />--%>
+							<security:authentication property="principal.username" />
 							<%--<security:authentication property="name" />--%>
 					</span>
 				</a>
